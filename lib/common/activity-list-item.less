@@ -86,20 +86,132 @@
     margin: 0 10px;
   }
 }
-.activity-status {
+.activity-status   .zui-btn{
+  min-width: 100px;
+}
+.activity-status, .mine {
+  //.zui-btn{
+  //
+  //  border-color: transparent;
+  //  background-color: #7ED321;
+  //  color:#fff;
+  //
+  //}
+  //.btn-noapply{
+  //  background-color: #fff;
+  //  color:#666;
+  //  border: 1px solid #ccc;
+  //}
+  //.btn-end,  .btn-nostart, .btn-refuse{
+  //  background-color: #F56467;
+  //}
+
+}
+
+
+.mine {
+  font-size: 12px;
+  color: #727272;
+  .mine-header{
+    font-size: 12px;
+    padding: 0 5px;
+    span{
+      margin-right: 5px;
+    }
+  }
+  .th{
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .img{
+    width: 35px;
+    height: 35px;
+    .border-radius(35px);
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .center{
+    width: 100px;
+    display: block;
+    text-align: center;
+  }
+  .zui-flex-fixed{
+    width: 100px;
+    padding: 0 10px;
+  }
+
+
+}
+.mine-content{
+  padding-top: 10px;
+  border-top: 1px solid #BEBEBE;;
+  .th {
+    font-weight: bold;
+  }
+
+  .tr {
+    margin-bottom: 10px;
+
+
+    .name{
+      display: block;
+      min-width: 4em;
+      .text-overflow();
+      max-width: 5em;
+      padding-left: 5px;
+    }
+    .zui-cell{
+      border-bottom: 1px solid #BEBEBE;;
+    }
+    .zui-cell:first-child{
+      border-bottom-color: transparent;
+    }
+  }
+  .tr-item{
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+  }
+  .look-detail{
+    margin-left: 5px;
+  }
   .zui-btn{
-    border-color: transparent;
-    background-color: #7ED321;
-    color:#fff;
-    min-width: 100px;
+    padding: 0 14px;
   }
-  .btn-noapply{
+  .zui-icon{
+    width:20px;
+    margin-right: 4px;
+  }
+  .activity-msg-detail{
+    padding: 0 0 5px 0;
+    margin-left: 60px;
+    position: relative;
+    top: -1px;
     background-color: #fff;
-    color:#666;
-    border: 1px solid #ccc;
-  }
-  .btn-end,  .btn-nostart, .btn-refuse{
-    background-color: #F56467;
+    border-bottom: 1px solid #BEBEBE;
+
+    p{
+      color:#B8B8B8;
+      padding: 5px;
+    }
+
+    li{
+      margin: 5px 0;
+    }
+
+    .q-tt{
+      color:#4b4b4b;
+    }
+    .q-an{
+      color:#727272;
+    }
   }
 
 }
