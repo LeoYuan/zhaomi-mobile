@@ -55,6 +55,10 @@
     position: relative;
     vertical-align: top;
     //overflow: hidden;
+
+    &.user{
+      border: 0;
+    }
   }
   .active.nav-item:after, .active.nav-item:before{
     content:"";
@@ -97,18 +101,19 @@
 
   .nav-item-msg {
     position: relative;
+    @value: 20px;
     .number{
       position: absolute;
-      right:-15px;
+      right:-12px;
       text-align: center;
-      line-height: 25px;
-      font-size: 10px;
+      line-height: @value;
+      font-size: 12px;
       z-index: 11;
-      top:-10px;
-      height: 25px;
-      min-width: 25px;
+      top:-8px;
+      height: @value;
+      min-width: @value;
       padding: 0 2px;
-      .border-radius(25px);
+      .border-radius(@value);
       overflow: hidden;
       background-color: #F56467;
       color: #fff;
