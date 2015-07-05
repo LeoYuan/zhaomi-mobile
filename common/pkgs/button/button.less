@@ -3,6 +3,7 @@
 //基础按钮
 //有默认 height, padding
 .zui-btn {
+  @btn-default-border-color: #979797;
   display: inline-block;
   .box-sizing(border-box);
 
@@ -40,7 +41,7 @@
 }
 .zui-btn, .zui-btn-pic{
   &, &:hover {
-    border: solid @btn-border-width @btn-default-border-color;
+    border: solid @btn-border-width #979797;
     color: @btn-default-color;
     background-color: @btn-default-bg;
   }
