@@ -9,7 +9,9 @@ module.exports = {
     //'create-criteria':  './modules/createaction/js/create-criteria.js'
     'message':     './modules/message/js/message.js',
     'mine':     './modules/mine/js/mine.js',
-    'activity':     './modules/activity/js/activity.js'
+    'activity':     './modules/activity/js/activity.js',
+    'register':     './modules/register/js/register.js',
+    'login':     './modules/login/js/login.js',
 
   },
   output: {
