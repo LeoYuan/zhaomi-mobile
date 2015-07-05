@@ -1,0 +1,105 @@
+.activity-lists{
+  padding: 5px;
+  background-color: #eaeaea;
+}
+.activity-list-item{
+  padding: 10px 5px;
+  background-color: #fff;
+  display: block;
+  .thumbnail {
+    height: 68px;
+    width: 92px;
+  }
+  .tt {
+    height: 24px;
+    font-size: 14px;
+    display: block;
+    &:extend(.text-overflow);
+
+  }
+
+  .list-item-desc{
+    padding:0px 5px 0 5px;
+    .zui-cell{
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+
+    }
+    &>div{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .address{
+    &:extend(.text-overflow);
+  }
+  .zui-flex-fixed{
+    width: 65px;
+    &:extend(.text-overflow);
+
+  }
+  .list-item-desc .zui-icon{
+    .scale(.7, .7);
+  }
+
+  .list-item{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 5px;
+  }
+
+  .btn-tip-text{
+    color: #BEBEBE;;
+    font-size: 12px;
+  }
+}
+
+.activity-list-item{
+  margin-bottom: 5px;
+  .m-tag {
+
+    padding-top: 5px;
+    height: 25px;
+    .m-tag-inner{
+      float: right;
+    }
+
+    .hot{
+      display: inline-block;
+      background-color: #ff7979;
+      color: #fff;
+      padding: 2px 5px;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    .price{
+      display: inline-block;
+      background-color: #fff;
+      color: #ff7979;
+    }
+  }
+  .activity-operation{
+    padding: 10px 0 0;
+  }
+  .operation-btn{
+    margin: 0 10px;
+  }
+}
+.activity-status {
+  .zui-btn{
+    border-color: transparent;
+    background-color: #7ED321;
+    color:#fff;
+    min-width: 100px;
+  }
+  .btn-noapply{
+    background-color: #fff;
+    color:#666;
+    border: 1px solid #ccc;
+  }
+  .btn-end,  .btn-nostart, .btn-refuse{
+    background-color: #F56467;
+  }
+
+}
