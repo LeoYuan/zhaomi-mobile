@@ -1,0 +1,139 @@
+@import '../normalize/normalize.css';
+@import "../../less/zui";
+
+//list
+
+
+.bgImage(@path){
+  background-image: url("/modules/@{path}");
+}
+.bgImageFormAssets(@name){
+  background-image: url("/assets/img/@{name}")
+}
+.bgSize(@width, @height){
+   -webkit-background-size: @width @height;
+   background-size: @width @height;
+}
+.bgPosition(@left, @top){
+  background-position: @left @top;
+}
+
+.text-overflow{
+  .text-overflow();
+}
+
+[class~=zui-icon], .zui-icon {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  .bgImageFormAssets('icon500x500.png');
+  .bgSize(250px, 250px);
+
+  &.icon-big{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+.icon-plus {
+  .bgPosition(-25px, -1px);
+}
+
+.icon-email {
+  .bgPosition(-201px, 0px);
+}
+
+.icon-arrow-up {
+  .bgPosition(-50px, 0);
+}
+.icon-address{
+  .bgPosition(-75px, -2px);
+
+}
+
+
+.icon-date{
+  .bgPosition(-150px, -2px);
+
+}
+
+
+.icon-distance{
+  .bgPosition(-125px, -2px);
+}
+
+.icon-number{
+  .bgPosition(-100px, -2px);
+}
+.icon-medal{
+  .bgPosition(-75px,-225px);
+
+}
+
+.icon-price{
+  .bgPosition(-200px, 0);
+
+}
+
+.zui-align-right {
+  text-align: right;
+  &>div{
+    display: inline-block;
+  }
+}
+
+.zui-align-center{
+  text-align: center;
+}
+.zui-link{
+  color:#4A90E2;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+
+
+
+.dialog{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  background-color:#fff;
+  border: 1px solid #eee;
+  padding: 10px;
+
+  .box-shadow(0 1px 2px rgba(0, 0, 0, .2));
+
+  .tip-icon{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: #7ED321;
+    .border-radius(50%);
+    overflow: hidden;
+  }
+  .icon-success{
+    .bgPosition(0, -50px)
+  }
+
+  .dialog-bottom{
+    padding: 10px 0;
+  }
+  .text{
+    color:#727272;
+    font-size: 12px;
+    padding: 10px 0;
+  }
+}
+
+@import "./header";
+@import "../../common/pkgs/selector/radio-checkbox.less";
+@import "../../common/pkgs/input/input.less";
