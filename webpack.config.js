@@ -12,6 +12,7 @@ module.exports = {
     'activity':     './modules/activity/js/activity.js',
     'register':     './modules/register/js/register.js',
     'login':     './modules/login/js/login.js',
+    'search':     './modules/search/js/search.js',
 
   },
   output: {

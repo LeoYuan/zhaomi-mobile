@@ -8,12 +8,22 @@
     margin: 0 auto;
     position: relative;
 
-
   }
   .user-msg{
+    height: 145px;
+    input{
+      width: 100px;
+    }
 
   }
-  .btn-edit{
+  .edit-input{
+    line-height: 29px;
+    height: 30px;
+    text-align: center;
+    border:1px solid transparent;
+    border-bottom: 1px solid #ccc;
+  }
+  .btn-edit, .btn-save{
     position: absolute;
     left: 100px;
     bottom: 10px;
@@ -23,7 +33,6 @@
 
   }
   .icon-edit{
-
     background-position: -100px -28px;
 
   }
@@ -36,8 +45,6 @@
     overflow: hidden;
     margin: 0 auto;
     position: relative;
-
-
     img{
       display: block;
       width: 100%;
@@ -51,19 +58,12 @@
     display: inline-block;
     min-width: 60px;
     text-align: center;
-
-
   }
   .mibi{
     color: #727272;
     line-height: 25px;
-
   }
 
-  [contenteditable].user-name{
-    border-bottom: 1px solid #ccc;
-
-  }
   #upload-image{
     opacity: 0;
     z-index: 9;
@@ -71,9 +71,68 @@
   .upload-image{
     display: none;
   }
-  .editing .upload-image{
+  .user-name-text{
     display: block;
   }
+  .btn-save{
+    display: none;
+  }
+  .edit-input{
+    display: none;
+  }
+  .display-text{
+    display: inline-block;
+  }
+  .edit-input{
+    display: none;
+  }
+  .edit-input:focus{
+    border-bottom-color: #7ED321;
+  }
+  .editing {
+
+    .upload-image{
+      display: inline-block;
+    }
+    .display-text{
+      display: none;
+    }
+    .edit-input{
+      display: inline-block;
+    }
+    .btn-save{
+      display: block;
+    }
+
+  }
+  .operation-content{
+
+  }
+
+  .edit-item{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    margin:0 auto;
+  }
+
+  .mobile .edit-input{
+    width: 80px;
+  }
+
+  .gender .edit-input{
+    width: 30px;
+  }
+  .age .edit-input{
+    width: 40px;
+  }
+
+  .other-msg{
+    margin: 10px 20px;
+    border-top: 1px solid #BEBEBE;
+  }
+
   #upload-image, .upload-image{
     position: absolute;
     left: 0;
