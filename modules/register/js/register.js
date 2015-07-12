@@ -12,6 +12,7 @@ $(function() {
         },
         initDatePicker: function() {
             var $appDate = $("#appDate");
+
             if ($appDate.length){
                 var currYear = (new Date()).getFullYear();
                 var opt={};

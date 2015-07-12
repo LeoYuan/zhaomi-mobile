@@ -55,9 +55,10 @@
 
             </div>
         </div>
+        <form id="formCondition" action="comment.php" method="post">
         <div class="condition">
             <div class="title">报名条件</div>
-            <form action="">
+
 
                 <div class="question question-radio">
                     <div class="question-type">
@@ -70,7 +71,7 @@
 
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="radio" name="x2" />
+                                        <input type="radio" name="x2" value="1"  datatype="" nullmsg="此项不能为空"   />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
@@ -78,7 +79,7 @@
 
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="radio" name="x2" />
+                                        <input type="radio" name="x2" value="2"  />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
@@ -86,12 +87,14 @@
 
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="radio" name="x2" />
+                                        <input type="radio" name="x2" value="3"   />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
                                 </div>
                             </div>
+                            <div class="Validform_checktip"></div>
+
                         </div>
                     </div>
 
@@ -104,10 +107,10 @@
                         <div class="item">
                             <div class="question-tt">请问您的学历是？</div>
                             <div class="question-result">
-
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="checkbox" name="x2" />
+                                        <input type="checkbox" name="x3" value="c1"
+                                               datatype="*" nullmsg="此项不能为空"    />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
@@ -115,7 +118,7 @@
 
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="checkbox" name="x2" />
+                                        <input type="checkbox" name="x3" value="c2"  />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
@@ -123,12 +126,14 @@
 
                                 <div class="result-item">
                                     <div class="zui-radio">
-                                        <input type="checkbox" name="x2" />
+                                        <input type="checkbox" name="x3" value="c3"  />
                                         <span class="zui-icon-radio"></span>
                                     </div>
                                     <label>高中</label>
                                 </div>
                             </div>
+                            <div class="Validform_checktip"></div>
+
                         </div>
                     </div>
                 </div>
@@ -142,9 +147,15 @@
                         <div class="item">
                             <div class="question-tt">请问您的学历是？</div>
                             <div class="question-result">
-                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    <textarea name="" cols="30" rows="10"
+                                              datatype="s5-16"
+                                              nullmsg="请输入您的学历信息"
+                                              errormsg="请输入最少10个,最多160个字符！"
+                                            ></textarea>
                            </div>
-                         </div>
+                            <div class="Validform_checktip"></div>
+
+                        </div>
                     </div>
                </div>
 
@@ -157,20 +168,22 @@
                             <div class="question-tt">请上传你的职业照</div>
                             <div class="question-result">
                                 <div class="upload">
-                                    <input type="file" name="" id="" />
+                                    <input type="file" name="" id="" datatype="*" nullmsg="请选择一张图片"  />
                                 </div>
                             </div>
+                            <div class="Validform_checktip"></div>
+
                         </div>
                     </div>
                 </div>
-            </form>
 
 
         </div>
         <div class="bottom">
             <div class="zui-btn zui-btn-pic"><i></i>分享获得10米币</div>
-            <div class="zui-btn zui-btn-important"><i></i>报名</div>
+            <button type="submit" class="zui-btn zui-btn-important btn-submit" ><i></i>报名</button>
         </div>
+        </form>
 
     </div>
 </div>

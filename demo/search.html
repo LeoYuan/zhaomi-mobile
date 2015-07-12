@@ -12,7 +12,6 @@
 	<div class="header zui-flex">
         <div class="zui-cell logo-warp">
             <div class="logo item">找米</div>
-            <div class="city item">地区 <i class="item zui-icon icon-arrow-up"></i></div>
         </div>
         <div class="nav">
             <a href="//zhaomi.biz/m/demo/list.html" class="nav-item active">
@@ -35,10 +34,14 @@
 
     <div class="main">
         <div class="search-input">
-            <input type="text" name="search" id="" class="input" placeholder="请输入你搜索的关键词"/>
+            <form action="//zhaomi.biz/m/demo/search" method="get" >
+
+            <input type="text" name="q" id="search-input" class="input" placeholder="请输入你搜索的关键词"/>
             <div class="zui-align-center">
-                <a href="#" class="zui-btn zui-btn-action" id="search-btn">搜索</a>
+                <button type="submit"  class="zui-btn zui-btn-action" id="search-btn">搜索</button>
             </div>
+            </form>
+
         </div>
     </div>
 
