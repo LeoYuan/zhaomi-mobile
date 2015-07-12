@@ -26,9 +26,9 @@ $(function() {
                     dateFormat: 'yyyy-mm-dd',
                     lang: 'zh',
                     showNow: true,
-                    nowText: "今天",
-                    startYear: currYear - 10, //开始年份
-                    endYear: currYear + 10 //结束年份
+                    nowText: "",
+                    startYear: currYear - 70, //开始年份
+                    endYear: currYear - 10 //结束年份
                 };
 
                 $appDate.mobiscroll($.extend(opt['date'], opt['default']));

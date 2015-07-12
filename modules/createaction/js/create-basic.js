@@ -201,7 +201,6 @@ $(function() {
                     ele:"#poster",
                     nullmsg: "请选择一张图片",
                     datatype:"image"
-
                 }
             ]);
 

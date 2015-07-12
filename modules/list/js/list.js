@@ -13,6 +13,8 @@ $(function() {
             //this.initCateList()
             this.initBanner($banner);
             this.initCateList();
+
+
         },
         initLinkUrl: function($obj){
             var urlParams = libUtil.parseQuery()

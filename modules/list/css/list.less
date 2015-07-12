@@ -1,6 +1,6 @@
 @import '../../../lib/common/common.less';
 
-#pageList{
+#pageList,#pageSearchList{
 
 
   .header{
@@ -106,7 +106,46 @@
     }
   }
 
+}
 
+#pageSearchList{
+  .tt{
+    font-size: 25px;
+    padding-top: 10px;
+  }
+  .tt-wrapper{
+    position: relative;
+  }
+  .m-tag{
+    position: absolute;
+    right:0;
+    top: 10px;
+  }
 
+  .activity-list-item{
+    padding: 0;
+    margin: 0 5px;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+  .tt{
+    height: 50px;
+  }
+  .btn-like, .btn-forward{
+    position: absolute;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  .btn-like{
+    right:0px;
 
+  }
+
+  .btn-forward{
+    right:35px;
+
+  }
 }
