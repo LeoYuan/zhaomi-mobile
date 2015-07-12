@@ -3204,7 +3204,7 @@
 
 
 	// module
-	exports.push([module.id, ".Validform_error {\n  border-color: red!important;\n}\n.Validform_wrong {\n  color: red;\n}\n.Validform_right {\n  display: none!important;\n}\n", ""]);
+	exports.push([module.id, ".Validform_error {\n  border-color: red!important;\n}\n.Validform_wrong,\n.error-data {\n  color: red;\n}\n.error-data {\n  display: none;\n}\n.Validform_right {\n  display: none!important;\n}\n", ""]);
 
 	// exports
 

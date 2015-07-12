@@ -893,7 +893,9 @@
 
 	//区域选择
 	module.exports = {
-	    init: function(){
+
+
+	    init: function(obj){
 
 	        //var tpl = '<div class="selectdialog" id="SelectDialog">' +
 	        //    '<div class="select-dia-mask">' +
@@ -922,7 +924,17 @@
 	        json.height = screen.height;
 	        json.ratio = window.devicePixelRatio;
 	        var text = JSON.stringify(json);
-	        var $SelectDialog = $('#SelectDialog');
+	        var $SelectDialog ;
+	        var $selectBtn ;
+	        if (obj.targetBtn){
+	            $selectBtn = $(obj.targetBtn);
+	        } else {
+	          $selectBtn = $("[data-select-area = 'true']");
+	        }
+
+
+	        $SelectDialog = $('#SelectDialog');
+
 	        //选择事件
 	        $SelectDialog.on("click", ".select-dia-check", function () {
 	            var target = $($(this).attr("data-target"));
@@ -937,18 +949,23 @@
 	        $("[data-select='true']").on("click", function () {
 	            $(this).text("");
 	            GetSelectData($(this));
-	        })
-
+	        });
+	        var callback;
 	        //选择省份
-	        $("[data-select-area = 'true']").on("click", function () {
-	            GetAreaSelect($(this), function(value) {
-	                var urlParams = libUtil.parseQuery();
-	                urlParams['loc'] = value[1];
-	                var href = libUtil.getUrlFormParams({
-	                    loc: value[1]
-	                });
-	                window.location.href = href;
-	            });
+	        $selectBtn.on("click", function () {
+	            if (!obj.callback){
+	                 callback = function(value) {
+	                    var urlParams = libUtil.parseQuery();
+	                    urlParams['loc'] = value[1];
+	                    var href = libUtil.getUrlFormParams({
+	                        loc: value[1]
+	                    });
+	                    window.location.href = href;
+	                }
+	            } else {
+	                callback = obj.callback;
+	            }
+	            GetAreaSelect($(this), callback);
 	        });
 
 	        //选择

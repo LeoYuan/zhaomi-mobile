@@ -82,7 +82,9 @@
                 <li>
                     <div class="active-name"><i class="zui-icon icon-address"></i>活动地点</div>
                     <div class="input-wrapper">
-                        <input type="text" class="zui-input-text" value="" id="prov" placeholder="请输入活动地点"/>
+                        <input type="text"  data-select-area="true" data-select-target="#NowProvince,#NowCity" data-select-title="请选择省份"  data-select-area='true'  class="zui-input-text" value="" id="city" readonly placeholder="选择地区" />
+                        <br/>
+                        <input type="text" class="zui-input-text" value="" id="other-local-msg" placeholder="输入详细地点"/>
                     </div>
                 </li>
 
@@ -96,6 +98,8 @@
                             <input type="text" readonly="readonly"  name="end-name" class="zui-cell zui-input-text select-date-time" value="" placeholder="选择结束时间" />
                         </div>
                     </div>
+                    <div class="error-data ">开始时间要大于结束时间</div>
+
                 </li>
 
                 <li>
@@ -131,11 +135,13 @@
 
                 <li>
                     <div class="active-name">活动类型</div>
-                    <div class="input-wrapper">
-                        <select name="" class="zui-input-select select-activity-type" id="action-type"  >
-                            <option value="0">请选择活动类型</option>
-                            <option value="1">1</option>
-                        </select>
+                    <div class="input-wrapper select-wrapper">
+                        <input  type="text" class="zui-input-select select-activity-type" name="action-type" readonly id="action-type" placeholder="请选择活动类型"/>
+
+                        <div class="select-list-content">
+                            <span data-val="1">类型1</span>
+                            <span data-val="2">类型1</span>
+                        </div>
                     </div>
                 </li>
 
@@ -143,7 +149,7 @@
                 <li>
                     <div class="active-name">活动海报</div>
                     <div class="input-wrapper">
-                        <input type="text" class="zui-input-text" value="" id="poster" placeholder="请输入活动名称"/>
+                        <input type="file" class="zui-input-text" value="" id="poster" placeholder="请选胎动一张活动海报"/>
                     </div>
                 </li>
             </ul>
@@ -155,5 +161,27 @@
     </div>
 
 </div>
+<!--下拉弹出部分 end-->
+<div class="selectdialog" id="SelectDialog">
+    <div class="select-dia-mask">
+    </div>
+    <div class="select-dia-table">
+        <div class="select-dia-cell">
+            <div class="select-dia ">
+            </div>
+        </div>
+    </div>
+</div>
+<script id="dialogarea" type="text/html">
+    <h3>{{title}}</h3>
+    <div class="select-dia-con">
+        <ul class="area select-dia-list">
+            {{each list as value i}}
+            <li data-value="{{value.Value}}" data-index="{{value.Key}}" class="select-area-check" data-target="{{target}}">{{value.Value}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
 </body>
 </html>
